@@ -24,4 +24,13 @@ Things you may want to cover:
 * ...
 
 rails new tbk -d postgresql
+database.yml
+    username: <%= Rails.application.credentials.db[:username] %>
+    password: <%= Rails.application.credentials.db[:password] %>
+EDITOR="atom --wait" bin/rails credentials:edit
+    db:
+        username:...
+        password:...
+
+rails g scaffold producto nombre descripcion:text stock:integer precio:decimal sku
 
